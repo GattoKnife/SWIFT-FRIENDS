@@ -81,11 +81,24 @@ class isLikedView: UIControl {
 
    //делала анимацию так же транзишином с флипом, но не смотря на то, что баундом по коду проще - мне понравилось больше.
     private func animatedHeart(numbersOfLike: Int ){
-        UIView.animate(withDuration: 0.2,
+        UIView.animate(withDuration: 0.3,
                        animations: {
                         self.likeImage.bounds.size.width -= 8
                         self.likeImage.bounds.size.height -= 8
-                       })
+                        
+                         })
+  
     }
     
+//    private func animatedHeart(numbersOfLike: Int ){
+//        UIView.animate(withDuration: 0.5,
+//                       animations: {
+//                        UIView.modifyAnimations(withRepeatCount: 2, autoreverses: false, animations: {
+//                        self.likeImage.bounds.size.width -= 8
+//                        self.likeImage.bounds.size.height -= 8
+//
+//                         })
+//    })
+//
+//    }
 }
