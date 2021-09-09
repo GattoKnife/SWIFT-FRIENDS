@@ -15,7 +15,7 @@ final class GalleryViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        tabBarController?.tabBar.isHidden = false
+        //tabBarController?.tabBar.isHidden = false - перенесла в контроллер, который скрывает табБар, чтобы все в одном месте
     }
     
     override func viewDidLoad() {

@@ -88,7 +88,7 @@ extension AllUsersViewController: UITableViewDelegate, UITableViewDataSource {
         return header
     }
    
-    //MARK: fight with firstLetter Header
+    //MARK: fight with firstLetter Header while search
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         searching ? 0 : UITableView.automaticDimension
     }

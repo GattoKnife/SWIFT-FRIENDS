@@ -203,7 +203,7 @@
                                 <rect key="frame" x="0.0" y="56" width="428" height="733"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="GroupTableViewCell" id="sMN-c4-dBa" customClass="GroupTableViewCell" customModule="GoodFriends" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="GroupTableViewCell" id="sMN-c4-dBa" customClass="GroupTableViewCell" customModule="GoodFriends" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="24.333333969116211" width="428" height="126.33333587646484"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sMN-c4-dBa" id="mxM-Gn-vHJ">
@@ -288,7 +288,7 @@
                                 <rect key="frame" x="0.0" y="56" width="428" height="733"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AllGroupsViewCell" id="muL-3q-yvP" customClass="AllGroupsViewCell" customModule="GoodFriends" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="AllGroupsViewCell" id="muL-3q-yvP" customClass="AllGroupsViewCell" customModule="GoodFriends" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="24.333333969116211" width="428" height="116.33333587646484"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="muL-3q-yvP" id="bdt-IW-KFI">
@@ -465,6 +465,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="7Qo-bn-NK8" secondAttribute="trailing" constant="8" id="2IG-w0-f7d"/>
                                                 <constraint firstItem="7Qo-bn-NK8" firstAttribute="leading" secondItem="ceh-7M-Y9Y" secondAttribute="trailing" constant="100" id="6DP-hm-LaG"/>
@@ -555,13 +556,14 @@
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W2s-a6-vdh" customClass="isLikedView" customModule="GoodFriends" customModuleProvider="target">
                                                     <rect key="frame" x="124" y="8" width="20" height="20"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="20" id="dDW-tB-4Jc"/>
                                                         <constraint firstAttribute="height" constant="20" id="do7-OG-q9r"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="O3P-ql-uab" secondAttribute="trailing" constant="8" id="EJc-F2-n6q"/>
                                                 <constraint firstItem="AmN-BF-jC4" firstAttribute="top" secondItem="B1M-nr-O3z" secondAttribute="top" constant="8" id="IjB-BQ-x3B"/>
@@ -618,7 +620,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ICf-Sf-keb" customClass="BigPhotoView" customModule="GoodFriends" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="56" width="428" height="733"/>
-                                <color key="backgroundColor" red="0.709667263360797" green="0.80252287559902546" blue="0.79593661270361005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.78515237569999996" green="0.82420843840000002" blue="0.8134856224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eLy-W0-4It"/>
@@ -648,6 +650,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.78159481289999999" green="0.81715911630000004" blue="0.80641824009999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="0.3831219971" green="0.4718360305" blue="0.18194195630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="Et8-Wq-dSe" kind="relationship" relationship="viewControllers" id="7xT-Wx-m6t"/>
@@ -661,7 +665,7 @@
         <!--My Friends-->
         <scene sceneID="Yj8-82-9nc">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Et8-Wq-dSe" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Et8-Wq-dSe" customClass="CustomNavigationAnimController" customModule="GoodFriends" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="My Friends" image="person.2" catalog="system" selectedImage="person.2.fill" id="NRm-f6-feE">
                         <color key="badgeColor" red="0.42788872119999999" green="0.51489210129999996" blue="0.20991510150000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
@@ -670,6 +674,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.80078761450000002" green="0.83462499899999998" blue="0.82422849149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.78159481289999999" green="0.81715911630000004" blue="0.80641824009999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.3831219971" green="0.4718360305" blue="0.18194195630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -691,6 +699,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="qSp-Ll-DOO">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.80643594259999996" green="0.83826953169999996" blue="0.83109837769999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.3831219971" green="0.4718360305" blue="0.18194195630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

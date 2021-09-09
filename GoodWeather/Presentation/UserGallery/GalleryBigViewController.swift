@@ -29,12 +29,15 @@ class GalleryBigViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        tabBarController?.tabBar.isHidden = false
        
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
+        //tabBarController?.tabBar.isHidden = false  - не срабатывает отсюда
         view.subviews.forEach({ $0.removeFromSuperview() })
+        
     }
     
 }
