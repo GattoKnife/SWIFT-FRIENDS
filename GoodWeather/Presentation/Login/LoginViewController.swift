@@ -16,6 +16,12 @@ final class LoginViewController: UIViewController {
     @IBOutlet private var passwordTextField: UITextField!
     @IBOutlet private var enterButton: UIButton!
     
+    //MARK STUPID DOTS
+    @IBOutlet var dotOne: UILabel!
+    @IBOutlet var dotTwo: UILabel!
+    @IBOutlet var dotThree: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -59,6 +65,11 @@ final class LoginViewController: UIViewController {
         
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        animatedDots()
+    }
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
@@ -91,7 +102,7 @@ final class LoginViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "demoLoginSegue" {
         let destinationController = segue.destination as! UITabBarController
-        destinationController.viewControllers?.forEach {$0.view.backgroundColor = .lightGray}
+        destinationController.viewControllers?.forEach {$0.view.backgroundColor = .cyan}
         // пример использования
         }
     }
@@ -100,6 +111,8 @@ final class LoginViewController: UIViewController {
         loginTextField.text = ""
         passwordTextField.text = ""
     }
+    
+    
     
     @objc func hideKeybord() {
         self.scrollView?.endEditing(true)
@@ -125,5 +138,57 @@ final class LoginViewController: UIViewController {
         scrollView?.contentInset = contentInsets
         scrollView?.scrollIndicatorInsets = contentInsets
     }
-
+    
+   //MARK STUPID DOTS ANIMATION
+    func animatedDots() {
+        var x = 0
+        
+        repeat {
+            
+        UIView.animateKeyframes(withDuration: 1,
+                                delay: 0,
+                                options: [.repeat],
+                                animations: {          UIView.addKeyframe(withRelativeStartTime: 0.0,
+                                                       relativeDuration: 0.20,
+                                                       animations: {
+                                                        self.dotOne.alpha = 0
+                                                       })
+                                    UIView.addKeyframe(withRelativeStartTime: 0.20,
+                                                       relativeDuration: 0.20,
+                                                       animations: {
+                                                        self.dotTwo.alpha = 0
+                                                       })
+                                    UIView.addKeyframe(withRelativeStartTime: 0.40,
+                                                       relativeDuration: 0.20,
+                                                       animations: {
+                                                        self.dotThree.alpha = 0
+                                                       })
+                                    UIView.addKeyframe(withRelativeStartTime: 0.60,
+                                                       relativeDuration: 0.20,
+                                                       animations: {
+                                                        self.dotOne.alpha = 1
+                                                       })
+                                    UIView.addKeyframe(withRelativeStartTime: 0.80,
+                                                       relativeDuration: 0.20,
+                                                       animations: {
+                                                        self.dotTwo.alpha = 1
+                                                       })
+                                    UIView.addKeyframe(withRelativeStartTime: 0.99,
+                                                       relativeDuration: 0.20,
+                                                       animations: {
+                                                        self.dotThree.alpha = 1
+                                                        
+                                                       })
+                                },
+                                completion: {_ in if x == 6 {return}})
+            
+            x += 1
+            print("\(x) + 1")
+        }
+        
+        while x != 6
+    }
+    
 }
+
+
