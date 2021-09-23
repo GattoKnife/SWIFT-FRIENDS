@@ -11,11 +11,16 @@ class GroupTableViewCell: UITableViewCell {
 
     static let identifier = "GroupTableViewCell"
     
-    @IBOutlet private var groupImageCell: UIImageView!
+       
+    @IBOutlet var groupImageCell: GroupPicView!
     @IBOutlet private var groupNameCell: UILabel!
+    @IBOutlet var groupDescriptionCell: UILabel!
    
-    func configure (imageName: String?, title: String?) {
-        groupImageCell.image = UIImage(named: "Dragon")
-        groupNameCell.text = title
+    func configure (group: Group) {
+        //imageFriend.imageView.image = UIImage(named: friend.userPic)
+        groupImageCell.setImage(UIImage(named: group.groupImage))
+        groupNameCell.text = group.groupTitle
+        groupDescriptionCell.text = group.groupDescription
+        //groupImageCell.image = UIImage(named: group.groupImage)
 }
 }
