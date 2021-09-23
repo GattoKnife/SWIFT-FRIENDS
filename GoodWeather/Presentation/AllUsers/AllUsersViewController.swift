@@ -16,14 +16,9 @@ final class AllUsersViewController: UIViewController, UISearchBarDelegate {
     var friends: [Friend] = []
     var firstLetters: [String] = []
     var sortedUsers = [[Friend]]()
+    var searching: Bool = false
     private let searchController = UISearchController(searchResultsController: nil)
-//    private var searchBarIsEmpty: Bool {
-//        guard let text = searchController.searchBar.text else { return false }
-//        return text.isEmpty
-//    }
-//    private var isFiltering: Bool {
-//        return searchController.isActive && !searchBarIsEmpty
-//    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,17 +30,14 @@ final class AllUsersViewController: UIViewController, UISearchBarDelegate {
         tableView.dataSource = self
         tableView.register(allUsersHeaderViewCell.self, forHeaderFooterViewReuseIdentifier: allUsersHeaderViewCell.identifier)
         
-        //setup SearchController
+        //MARK: setup SearchController
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "Search"
+        searchController.searchBar.placeholder = "Search by username"
         navigationItem.searchController = searchController
         definesPresentationContext = true
-    
-        
+   
     }
-    
- 
   
     private func firstLetters (_ friends: [Friend]) -> [String] {
         let allFirstLetters = friends.map { $0.name}
@@ -87,12 +79,18 @@ extension AllUsersViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        
+        guard !searching else {
+            return nil
+        }
         let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: allUsersHeaderViewCell.identifier) as! allUsersHeaderViewCell
         
         header.configure(String(firstLetters[section]))
-        
         return header
+    }
+   
+    //MARK: fight with firstLetter Header while search
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        searching ? 0 : UITableView.automaticDimension
     }
     
         }
@@ -103,18 +101,20 @@ extension AllUsersViewController: UISearchResultsUpdating{
         
     }
     
+    //MARK: searching
     private func filterUsersBySearchText(_ searchText: String) {
         let filtredBySearch: [Friend]
         
         if searchText .isEmpty {
             filtredBySearch = friends
+            searching = false
             
         } else {
-        
+            searching = true
             filtredBySearch = friends.filter({ (user:Friend) -> Bool in
-           
-            return user.name.lowercased().contains(searchText.lowercased())
-        })
+                
+                return user.name.lowercased().contains(searchText.lowercased())
+            })
         }
         sortedUsers = sortedUsers(filtredBySearch, firstLetter: firstLetters)
         tableView.reloadData()
