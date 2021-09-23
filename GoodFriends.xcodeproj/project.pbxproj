@@ -41,6 +41,7 @@
 		92F5D57026E8E5B10009132A /* PushAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F5D56E26E8E5B10009132A /* PushAnimator.swift */; };
 		92F5D57126E8E5B10009132A /* PopAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F5D56F26E8E5B10009132A /* PopAnimator.swift */; };
 		92F5D57326E8EAB50009132A /* CustomNavigationAnimController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F5D57226E8EAB50009132A /* CustomNavigationAnimController.swift */; };
+		92F5D57526FC621F0009132A /* SingletoneSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F5D57426FC621E0009132A /* SingletoneSession.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,7 @@
 		92F5D56E26E8E5B10009132A /* PushAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushAnimator.swift; sourceTree = "<group>"; };
 		92F5D56F26E8E5B10009132A /* PopAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopAnimator.swift; sourceTree = "<group>"; };
 		92F5D57226E8EAB50009132A /* CustomNavigationAnimController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationAnimController.swift; sourceTree = "<group>"; };
+		92F5D57426FC621E0009132A /* SingletoneSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingletoneSession.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				92623E3F26BD684B00011B1E /* ViewController.swift */,
+				92F5D57426FC621E0009132A /* SingletoneSession.swift */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -387,6 +390,7 @@
 				92C32FE526CD4BDD00668213 /* Groups.swift in Sources */,
 				92C32FF326CE767500668213 /* GalleryViewController.swift in Sources */,
 				924151FA26C559550018F403 /* GroupTableViewCell.swift in Sources */,
+				92F5D57526FC621F0009132A /* SingletoneSession.swift in Sources */,
 				92F5D56826E4ED730009132A /* BigPhotoViewOld.swift in Sources */,
 				92F5D56026DB7C620009132A /* AllGroupsViewCell.swift in Sources */,
 				92C32FE726CD4FB800668213 /* Gallery.swift in Sources */,
