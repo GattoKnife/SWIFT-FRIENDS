@@ -77,7 +77,7 @@ extension FriendsViewController: UITableViewDelegate, UITableViewDataSource {
             self.friends.remove(at: indexPath.row)
             self.tableView.deleteRows(at: [indexPath], with: .fade)
         }
-        action.backgroundColor = #colorLiteral(red: 0.6033485814, green: 0.7556870102, blue: 0.7961941749, alpha: 1)
+        action.backgroundColor = #colorLiteral(red: 0.3790025711, green: 0.4678834677, blue: 0.1819418669, alpha: 1)
         action.image = UIImage(systemName: "trash.fill")
         return action
     }
